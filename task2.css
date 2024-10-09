@@ -1,0 +1,428 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background-color: #f8f5f5;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #101010;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/bg.png') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background-position: center 50px; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Slide-in anima
+tion for h1 */
+.content h1 {
+    /* margin-top: 200px; */
+    color: #f8f5f5;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    animation: slideInFromLeft 1s ease-in-out forwards; /* New slide-in animation */
+}
+
+/* Scale-in animation for h3 */
+.content h3 {
+    margin-top: 300px;
+    color: #f8f5f5;
+    font-size: 1rem;
+    letter-spacing: 8px;
+    animation: slideInFromLeft 1s ease-in-out forwards; /* New scaling animation */
+    position: relative; /* Add this to allow for transformation */
+    left: -px; /* Adjust this value to move it left */
+}
+
+
+.quote-button {
+    animation: slideInFromLeft 1s ease-in-out forwards;
+    background-color: yellow; /* Button color */
+    color: wheat;
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quote-button:hover {
+    background-color: #fcd200; /* Slightly darker yellow on hover */
+}
+
+
+#marqueeContent {
+    position: relative;
+    left: 100%; /* Start content off-screen */
+    transition: left 5s linear; /* Smooth scrolling effect */
+}
+
+.main-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+  .background-image {
+    background: url('images/work.png') no-repeat center center/cover;
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  h2 {
+    text-align: start;
+     color:white;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .left-card {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width */
+    max-width: 600px; /* Set a maximum width */
+    max-height: 300px; /* Set a maximum height */
+    padding: 15px; /* Reduce padding */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid #ffffff; /* Adjust the color and thickness as needed */
+}
+
+  
+.top-card {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: white
+   
+}
+
+.right-cards .card {
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    max-width: 600px; /* Adjust this value to set your desired width */
+    width: 100%; /* Ensures the card takes the full width of its container */
+    transition: background-image 0.3s ease; /* Smooth transition for the background image */
+}
+
+.right-cards .card:hover {
+    background-image: url('images/work.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+
+  
+h4 {
+    color: black; /* Default text color */
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
+}
+
+h4:hover {
+    color: white; /* Change this to your desired hover color */
+   
+}
+
+
+  h3{
+    color: yellow;
+  }
+  
+  p {
+    color: grey;
+    font-size: 16px;
+  }
+  p:hover{
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      flex-direction: column;
+    }
+  
+    .right-cards {
+      flex-direction: column;
+    }
+  }
+  
+  
+  .contact-button {
+    background-color: yellow; /* Button color */
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 12px; /* Increased font size for better readability */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for a hover effect */
+    align-self: flex-end; /* Align the button to the right side */
+    display: flex; /* Ensure the button can align properly */
+    justify-content: center; /* Center the text within the button */
+    border-radius: 5px; /* Added border-radius for rounded corners */
+    margin-left: auto; /* Push the button to the right */
+}
+
+.contact-button:hover {
+    background-color: orange; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+h5{
+    font-size: 36px;
+    color: yellow;
+}
+.see-more-btn {
+    
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: yellow; /* Button color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .see-more-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .images-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .image-card {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-card h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .image-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+    .shift-right {
+    margin-left: 20px; /* Adjust as needed */
+  }
+  .images-column {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: top;
+    height: 800px; /* Adjust the height as needed */
+}
+
+  
+  .image-cardd {
+    margin: 10px;
+  }
+  
+  .image-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .image {
+   
+    height: auto;
+  }
+  
+.image-cardd {
+    position: relative; /* Set position for overlay */
+    overflow: hidden; /* Ensure child elements do not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-bottom: 10px; /* Add space between image cards */
+}
+
+.image-cardd:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.image {
+    width: 100%; /* Ensure the image covers the card */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.image-cardd:hover .image {
+     display: flex;
+    transform: scale(1.1); /* Slightly scale up the image */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding for text */
+    text-align: center; /* Center the text */
+    display: none; /* Hide by default */
+    position: absolute; /* Position it below the image */
+    bottom: 0; /* Align to bottom of the image card */
+    left: 0;
+    width: 100%;
+}
+
+.image-cardd:hover .overlay {
+    display: block; /* Show overlay on hover */
+}
+
+
+  
+.top-cardd {
+    flex: 1;
+    min-width: 300px;
+    height: 250px; /* Set a specific height */
+    padding: 20px; /* You can keep the padding as is */
+    background-color: rgba(255, 217, 82, 1);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+  
+.marquee {
+    width: 60%; /* Adjust width as needed */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    box-sizing: border-box; /* Include padding in width */
+   
+   
+  }
+  
+  .marquee span {
+    display: inline-block;
+    animation: scroll 15s linear infinite; /* Adjust duration for speed */
+    padding-left: 100%; /* Start from outside the left */
+  }
+  
+
+  
+  img {
+    margin-right: 20px; /* Space between images */
+  }
+
+
+  .right-text {
+    margin-left: 20px; /* Space between the marquee and the text */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark gray color for contrast */
+    text-align: left; /* Align text to the left */
+    padding: 10px 0; /* Add vertical padding for spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for emphasis */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+ .clients-partners {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: end; /* Aligns text to the right */
+    line-height: 0.1;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: flex-end; /* Ensures the text is aligned to the right */
+    height: 100%; /* Make sure the parent container has a defined height */
+}
+
+.clients-partners br {
+    display: none; /* Hides the <br> if needed */
+    margin-bottom: 10px;
+}
+
+
+  

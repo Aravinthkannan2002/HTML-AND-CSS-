@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 400px; /* Restricting width for larger screens */
+    padding: 15px;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* Increased spacing */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    background-color: #f9f9f9; /* Softer background */
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -5px;
+    font-size: 13px;
+    color: #007bff;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Accessible focus outline */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+    }
+    
+    .login-box h2 {
+        font-size: 22px;
+    }
+    
+    .input-group input {
+        padding: 10px 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
